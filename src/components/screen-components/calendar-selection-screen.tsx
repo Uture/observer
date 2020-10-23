@@ -5,7 +5,8 @@ import styles from '@styles/commonStyle'
 import { useLocalCalendars } from '@hooks/calendarHooks'
 
 interface Props {
-  calendars: ExpoCalendar.Calendar[]
+  calendars: ExpoCalendar.Calendar[],
+  onSelect: Function
 }
 interface State {}
 
@@ -19,17 +20,13 @@ class CalendarSelectionScreen extends Component<Props, State> {
           return <TouchableOpacity
             key={item.id}
             style={styles.listItem}
-            onPress={() => this.onCalendarSelected(item.id)}>
+            onPress={() => this.props.onSelect(item.id)}>
               <Text style={{color: 'black'}}>{'Calendar: '+item.name}</Text>
             </TouchableOpacity>
         })
       }
     </View>
     )
-  }
-
-  onCalendarSelected(calendarId: string) {
-
   }
 
 }
