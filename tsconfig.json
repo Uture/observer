@@ -11,9 +11,10 @@
     "paths": {
       "*": ["*"],
       "@components/*": ["components/*"],
-      "@pretty/*": ["pretty/*"],
+      "@styles/*": ["styles/*"],
       "@data/*": ["data-model/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@constants/*": ["constants/*"]
     },
     "baseUrl": "./src"
   }

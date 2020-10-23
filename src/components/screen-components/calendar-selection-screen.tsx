@@ -1,7 +1,7 @@
 import React, { Component, useEffect } from 'react'
 import * as ExpoCalendar from 'expo-calendar'
 import { TouchableOpacity, View, Text } from 'react-native'
-import styles from '@pretty/common-style';
+import styles from '@styles/commonStyle'
 import { useLocalCalendars } from '@hooks/calendarHooks'
 
 interface Props {
@@ -29,7 +29,7 @@ class CalendarSelectionScreen extends Component<Props, State> {
   }
 
   onCalendarSelected(calendarId: string) {
-    
+
   }
 
 }

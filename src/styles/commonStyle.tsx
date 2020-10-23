@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
   },
 
   listItem: {
-    padding: 10,
-    marginTop: 10,
+    padding: 15,
+    marginTop: 5,
     alignItems: 'center',
-    backgroundColor: '#EFDECD'
+    backgroundColor: '#adf'
   }
 
 });

@@ -18,9 +18,10 @@ module.exports = function(api) {
           ],
           alias: {
             "@components": "./src/components",
-            "@pretty": "./src/pretty",
+            "@styles": "./src/styles",
             "@data": "./src/data-model",
-            "@hooks": "./src/hooks"
+            "@hooks": "./src/hooks",
+            "@constants": "./src/constants"
           }
         }
       ]
