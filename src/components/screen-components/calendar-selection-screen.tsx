@@ -18,13 +18,18 @@ class CalendarSelectionScreen extends Component<Props, State> {
         this.props.calendars.map((item: ExpoCalendar.Calendar, index: number) => {
           return <TouchableOpacity
             key={item.id}
-            style={styles.listItem}>
+            style={styles.listItem}
+            onPress={() => this.onCalendarSelected(item.id)}>
               <Text style={{color: 'black'}}>{'Calendar: '+item.name}</Text>
             </TouchableOpacity>
         })
       }
     </View>
     )
+  }
+
+  onCalendarSelected(calendarId: string) {
+    
   }
 
 }
