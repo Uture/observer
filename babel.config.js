@@ -21,7 +21,8 @@ module.exports = function(api) {
             "@styles": "./src/styles",
             "@data": "./src/data-model",
             "@hooks": "./src/hooks",
-            "@constants": "./src/constants"
+            "@constants": "./src/constants",
+            "@redux": "./src/redux"
           }
         }
       ]

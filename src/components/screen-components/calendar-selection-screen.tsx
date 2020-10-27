@@ -1,6 +1,6 @@
 import React, { Component, useEffect } from 'react'
 import * as ExpoCalendar from 'expo-calendar'
-import { TouchableOpacity, View, Text } from 'react-native'
+import { TouchableOpacity, View, Text, ScrollView } from 'react-native'
 import styles from '@styles/commonStyle'
 import { useLocalCalendars } from '@hooks/calendarHooks'
 
@@ -14,7 +14,7 @@ class CalendarSelectionScreen extends Component<Props, State> {
   
   render() {
     return (
-    <View>
+    <ScrollView>
       {
         this.props.calendars.map((item: ExpoCalendar.Calendar, index: number) => {
           return <TouchableOpacity
@@ -25,7 +25,7 @@ class CalendarSelectionScreen extends Component<Props, State> {
             </TouchableOpacity>
         })
       }
-    </View>
+    </ScrollView>
     )
   }
 

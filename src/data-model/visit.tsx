@@ -1,6 +1,6 @@
 export default class Visit {
 
-  constructor(private id: number, public dateFrom: Date, public dateTo: Date) {
+  constructor(public id: string, public startDate: string|Date, public endDate: string|Date, public title: string, public confirmed: boolean) {
 
   }
 

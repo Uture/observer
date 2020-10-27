@@ -14,7 +14,8 @@
       "@styles/*": ["styles/*"],
       "@data/*": ["data-model/*"],
       "@hooks/*": ["hooks/*"],
-      "@constants/*": ["constants/*"]
+      "@constants/*": ["constants/*"],
+      "@redux/*": ["redux/*"]
     },
     "baseUrl": "./src"
   }
