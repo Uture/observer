@@ -12,7 +12,7 @@
       "*": ["*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@data/*": ["data-model/*"],
+      "@data/*": ["data/*"],
       "@hooks/*": ["hooks/*"],
       "@constants/*": ["constants/*"],
       "@redux/*": ["redux/*"]

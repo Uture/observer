@@ -19,7 +19,7 @@ module.exports = function(api) {
           alias: {
             "@components": "./src/components",
             "@styles": "./src/styles",
-            "@data": "./src/data-model",
+            "@data": "./src/data",
             "@hooks": "./src/hooks",
             "@constants": "./src/constants",
             "@redux": "./src/redux"

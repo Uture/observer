@@ -1,12 +1,21 @@
-import Visit from '@data/visit'
+import ExternalVisit from '@data/entity/externalVisit'
+import Pet from '@data/entity/pet'
 
 // Action Types
-export const SET_EVENTS = 'SET_EVENTS'
+export const SET_EXTERNAL_VISITS = 'SET_EXTERNAL_VISITS'
+export const SET_PETS = 'SET_PETS'
 
 // Action Creators
-export function setVisits(events: Visit[]) {
+export function setExternalVisits(events: ExternalVisit[]) {
   return {
-    type: SET_EVENTS,
-    events 
+    type: SET_EXTERNAL_VISITS,
+    events
+  }
+}
+
+export function setPets(pets: Pet[]) {
+  return {
+    type: SET_PETS,
+    pets
   }
 }
