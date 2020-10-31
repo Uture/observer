@@ -1,7 +1,7 @@
 import React, { Component, useEffect } from 'react'
 import * as ExpoCalendar from 'expo-calendar'
 import { TouchableOpacity, View, Text, ScrollView } from 'react-native'
-import styles from '@styles/commonStyle'
+import { common } from '@styles/commonStyle'
 import { useLocalCalendars } from '@hooks/calendarHooks'
 
 interface Props {
@@ -19,7 +19,7 @@ class CalendarSelectionScreen extends Component<Props, State> {
         this.props.calendars.map((item: ExpoCalendar.Calendar, index: number) => {
           return <TouchableOpacity
             key={item.id}
-            style={styles.listItem}
+            style={common.listItem}
             onPress={() => this.props.onSelect(item.id)}>
               <Text style={{color: 'black'}}>{'Calendar: '+item.name}</Text>
             </TouchableOpacity>

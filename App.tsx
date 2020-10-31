@@ -29,7 +29,7 @@ function App() {
 
   // provide custom Font
   let [fontsLoaded] = useFonts({
-    'OpenSans-Regular': require('./assets/fonts/opensans/OpenSans-Regular.ttf'),
+    'OpenSans': require('./assets/fonts/opensans/OpenSans-Regular.ttf'),
     'OpenSans-SemiBold': require('./assets/fonts/opensans/OpenSans-SemiBold.ttf'),
     'OpenSans-Bold': require('./assets/fonts/opensans/OpenSans-Bold.ttf'),
   });
@@ -61,7 +61,7 @@ function App() {
     fetchCalendarAsync()
 
     return () => { isMounted = false }
-  }, [])
+  })
 
   // when calendarId is set, fetch all events for today
   useEffect(() => {

@@ -49,12 +49,13 @@ export const visitsScreen = {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.MAIN_FOREGROUND,
-    padding: 10
+    backgroundColor: '#357266',
+    padding: 15
   },
 
   dateIndicatorText: {
-    color: colors.TITLE_COLOR
+    color: 'white',
+    fontFamily: 'OpenSans-SemiBold'
   }
 
 }

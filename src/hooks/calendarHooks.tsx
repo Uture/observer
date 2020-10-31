@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as ExpoCalendar from 'expo-calendar'
 import ExternalVisit from '@data/entity/externalVisit'
+import moment from 'moment'
 
 export const useLocalCalendars = (Component: any) => {
   return (props: any) => {
@@ -30,7 +31,9 @@ function getLocalCalendars(): ExpoCalendar.Calendar[] {
 export async function importEvents(calendarId: string, startDate: Date, endDate: Date, callback: Function) {
   await ExpoCalendar.getEventsAsync([calendarId], startDate, endDate).then((events: ExpoCalendar.Event[]) => {
     const visits = events.map((value, index) => {
-      let visit = new ExternalVisit(value.id, value.title, value.startDate, value.endDate)
+      let startDate = moment(value.startDate).utc(true)
+      let endDate = moment(value.endDate).utc(true)
+      let visit = new ExternalVisit(value.id, value.title, startDate, endDate)
       return visit
     })
     callback(visits)
