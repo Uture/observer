@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { View } from 'react-native'
 import CalendarSelectionScreen from '@components/screen-components/calendar-selection-screen'
 import TabNavigator from '@components/navigation/tabNavigator'
 import AsyncStorage from '@react-native-community/async-storage'
@@ -10,6 +11,7 @@ import db from '@data/sqlite-facade'
 import ExternalVisit from '@data/entity/externalVisit'
 import Pet from '@data/entity/pet'
 import { setPets, setExternalVisits } from '@redux/actionCreators'
+import { useFonts } from 'expo-font'
 
 const AppWrapper = () => {
 
@@ -24,6 +26,13 @@ function App() {
   const [calendarId, setCalendarId] = useState<string|null>(null)
 
   const dispatch = useDispatch()
+
+  // provide custom Font
+  let [fontsLoaded] = useFonts({
+    'OpenSans-Regular': require('./assets/fonts/opensans/OpenSans-Regular.ttf'),
+    'OpenSans-SemiBold': require('./assets/fonts/opensans/OpenSans-SemiBold.ttf'),
+    'OpenSans-Bold': require('./assets/fonts/opensans/OpenSans-Bold.ttf'),
+  });
 
   // on App load, initialize local SQLite db
   useEffect(() => {
@@ -80,6 +89,9 @@ function App() {
 
   const entryPoint = calendarId == null ? <CalendarSelectionScreen onSelect={onCalendarChosen}/> : <TabNavigator/>
 
+  if(!fontsLoaded) {
+    return (<View></View>)
+  }
   return (
     <Provider store={store}>
       { entryPoint }
